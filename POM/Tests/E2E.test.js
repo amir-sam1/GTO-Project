@@ -24,7 +24,7 @@ test.beforeEach(async ({ page }) => {
 
 });
 
-
+// Test suite for end-to-end tests
 
 test.describe('End-to-End Tests', () => {
 
