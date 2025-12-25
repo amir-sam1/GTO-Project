@@ -4,7 +4,7 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  env:
+env:
     BASE_URL: ${{ vars.BASE_URL }}
     EMAIL: ${{ vars.EMAIL }}
     PASSWORD: ${{ vars.PASSWORD }}
