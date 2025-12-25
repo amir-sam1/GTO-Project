@@ -7,7 +7,7 @@ const config = {
     testDir: './POM',
   timeout: 40000,
   use: {
-    headless: false,
+    headless: true,
     screenshot: 'only-on-failure',
     trace: 'on-first-retry',
     actionTimeout: 40000,
