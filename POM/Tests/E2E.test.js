@@ -21,7 +21,6 @@ test.beforeEach(async ({ page }) => {
     // Navigate to login page
     await loginPage.navigate();
 
-
 });
 
 // Test suite for end-to-end tests

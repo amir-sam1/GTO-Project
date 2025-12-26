@@ -107,7 +107,7 @@ class AddNewQuotationPage extends Basepage{
             await this.activationDateInput.click();
             await this.selectActivationDate.first().click();
             await this.nextButton.click();
-            console.log(`Quotation with ID ${this.quotation_Id} created successfully`);
+            console.log(`General Quotation with ID ${this.quotation_Id} created successfully`);
 
         
     }

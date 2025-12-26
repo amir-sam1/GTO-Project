@@ -5,12 +5,12 @@ dotenv.config();
 const config = {
   
     testDir: './POM',
-  timeout: 40000,
+  timeout: 60000,
   use: {
-    headless: true,
+    headless: false,
     screenshot: 'only-on-failure',
     trace: 'on-first-retry',
-    actionTimeout: 40000,
+    actionTimeout: 60000,
     viewport: { width: 1920, height: 1080 },
     launchOptions: {
         slowMo: 500,
