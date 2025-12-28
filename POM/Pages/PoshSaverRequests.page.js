@@ -10,6 +10,8 @@ class PoshsaverRequestsPage extends Basepage {
         this.cancelBtn = page.locator('[id="Reject_Invoice"]')
         this.statusOfRequest = page.locator('//span[@class="Paragraph200Heavy text-capitalize"]')
         this.yesBtn = page.locator('//span[@class="Button100" and contains(.,\'Yes\')]')
+        this.historyBtn = page.locator('//a[@href="/poshsaver-requests/history"]')
+        this.selectFirstRowHistory = page.locator('//th[contains(.,\'Customer Name\')]//following::button[1]')
 
 
 
@@ -42,13 +44,24 @@ class PoshsaverRequestsPage extends Basepage {
             await this.selectFirstRequest.click();
             await this.approveBtn.click();
             await this.yesBtn.click();
+            await this.historyBtn.click()
+            await this.selectFirstRowHistory.click()
+            expect(await this.statusOfRequest).toContain('approved')
+
+
+
         } else if (requestType === 'cancel') {
             await this.selectFirstRequest.click();
             await this.cancelBtn.click();
             await this.yesBtn();
+            await this.historyBtn.click();
+            await this.selectFirstRowHistory.click();
+            expect(await this.statusOfRequest).toContain('Rejected')
         }
 
     }
+
+    
 
 
     
