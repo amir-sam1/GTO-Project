@@ -9,6 +9,7 @@ class Homepage extends Basepage {
         this.searchQuotationInput = page.locator('//input[@id="Search.."]');
         this.customerBtn = page.locator("//span[@class=\"styles_navTitle__u9Bvz w-100 Paragraph200Heavy\" and contains(.,'Customers')]");
         this.poshSaverRequestsTab = page.locator('//a[@href="/poshsaver-requests"]')
+        this.memebershipsBtn = page.locator('//span[@class="styles_navTitle__u9Bvz w-100 Paragraph200Heavy" and contains(.,\'Memberships\')]')
     }
 
     async navigate(){

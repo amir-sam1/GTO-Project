@@ -1,8 +1,11 @@
+import { expect } from "@playwright/test";
 import Basepage from "./Base.page";
-import { expect } from "allure-playwright";
+
 class PoshsaverRequestsPage extends Basepage {
     constructor(page){
         super(page);
+
+
         //locators
         this.requestsList = page.locator('(//tr[@id="tableRow"])[1]')
         this.selectFirstRequest = page.locator('//th[contains(.,\'Customer Name\')]//following::button[1]')
@@ -56,7 +59,9 @@ class PoshsaverRequestsPage extends Basepage {
             await this.yesBtn();
             await this.historyBtn.click();
             await this.selectFirstRowHistory.click();
-            expect(await this.statusOfRequest).toContain('Rejected')
+            const status = await this.statusOfRequest.textContent()
+            
+            expect(status).toContain('Rejected')
         }
 
     }
