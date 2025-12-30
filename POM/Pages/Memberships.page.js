@@ -1,11 +1,13 @@
 import { expect } from "@playwright/test";
 import Basepage from "./Base.page";
 
+
 class MembershipsPage extends Basepage {
 
     constructor(page){
         super(page)
         //locators
+
         this.membership_Name
         this.addNewMembershipBtn = page.locator('//button[@id="AddNewMembership_Membership"]');
         this.membershipNameInput = page.getByPlaceholder('Membership Name');
@@ -22,7 +24,6 @@ class MembershipsPage extends Basepage {
         this.benefitsActionBox = page.locator('(//div[@class="ant-switch-handle"])[1]')
         this.annualFeesInput = page.locator('//span[contains(.,\'Annual Fees\')]//following::input[1]')
         this.saveBtn = page.locator('#Save_AddNewMembership')
-
         this.searchInput = page.locator('//input[@id="Search.."]')
         this.firstRowCreated = page.locator('//th[contains(.,\'Card Name\')]//following::button[1]')
 
@@ -42,6 +43,7 @@ class MembershipsPage extends Basepage {
         await this.cardCodeInput.fill('1234');
         await this.membershipPiceInput.fill('1000');
         await this.file.setInputFiles('/home/amir-samy/Pictures/Screenshots/admin panel master card .png');
+
         await this.cardTemplateDropdown.click();
         await this.selectCardTeamlateOptions.click();
         await this.benefitsDropdownlist.click();

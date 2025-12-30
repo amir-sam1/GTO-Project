@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import Loginpage from '../Pages/Login.page.js';
 import Homepage from '../Pages/Home.page.js';
-import PoshsaverRequestsPage from '../Pages/PoshSaverRequests.page.js';
+import PoshSaverRequestsPage from '../Pages/PoshSaverRequests.page.js';
 
 
 let loginPage, homepage, addNewQuotationPage, poshSaverRequests;
@@ -14,7 +14,7 @@ test.beforeEach(async ({ page }) => {
     // Initialize page object
     loginPage = new Loginpage(page);
     homepage = new Homepage(page);
-    poshSaverRequests = new PoshsaverRequestsPage(page);
+    poshSaverRequests = new PoshSaverRequestsPage(page);
 
     // Navigate to login page
     await loginPage.navigate();

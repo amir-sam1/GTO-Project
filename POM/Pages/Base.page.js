@@ -14,9 +14,7 @@ class Basepage{
         return this.page.getByText(text);
     }
 
-    async sleep(ms){
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
+   
 
 }
 

@@ -1,7 +1,7 @@
 import { expect } from "@playwright/test";
 import Basepage from "./Base.page";
 
-class PoshsaverRequestsPage extends Basepage {
+class PoshSaverRequestsPage extends Basepage {
     constructor(page){
         super(page);
 
@@ -15,11 +15,6 @@ class PoshsaverRequestsPage extends Basepage {
         this.yesBtn = page.locator('//span[@class="Button100" and contains(.,\'Yes\')]')
         this.historyBtn = page.locator('//a[@href="/poshsaver-requests/history"]')
         this.selectFirstRowHistory = page.locator('//th[contains(.,\'Customer Name\')]//following::button[1]')
-
-
-
-
-
 
 
     }
@@ -73,4 +68,4 @@ class PoshsaverRequestsPage extends Basepage {
 
 }
 
-export default PoshsaverRequestsPage;
+export default PoshSaverRequestsPage;
