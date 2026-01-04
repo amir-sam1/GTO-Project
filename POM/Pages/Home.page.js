@@ -11,6 +11,8 @@ class Homepage extends Basepage {
         this.poshSaverRequestsTab = page.locator('//a[@href="/poshsaver-requests"]')
         this.memebershipsBtn = page.locator('//span[@class="styles_navTitle__u9Bvz w-100 Paragraph200Heavy" and contains(.,\'Memberships\')]')
         this.companiesBtn = page.locator('//a[@href="/companies"]')
+        this.servicesBtn = page.locator('//a[@href="/services"]')
+        this.supplierBtn = page.locator('//a[@href="/suppliers"]')
     }
 
     async navigate(){

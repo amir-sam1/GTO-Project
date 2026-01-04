@@ -35,8 +35,6 @@ test.describe('Company E2E tests', () =>{
         await companies.CreateNewCompany(randomCompanyName,randomCompanyCode,randomCompanyEmail)
         await companies.verifyCompanyCreated(randomCompanyName)
 
-        
-
 
     });
 
