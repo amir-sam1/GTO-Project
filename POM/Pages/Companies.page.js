@@ -48,7 +48,7 @@ class companiesPage extends Basepage{
     async verifyCompanyCreated(name){
         await this.searchInput.fill(name)
         const locator = this.page.locator(`text=${name}`)
-        expect(locator).toBeVisible()
+        await expect(locator).toBeVisible()
 
     }
 

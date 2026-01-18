@@ -68,6 +68,7 @@ class AddNewQuotationPage extends Basepage{
         this.selectArrivalTime = page.locator("(//span[contains(.,'Arrival Time')]//following::a)[1]");
         this.cabinInput = page.locator("(//span[contains(.,'Cabin')]//following::input)[1]");
         this.baggageAllowanceInput = page.locator("(//span[contains(.,'Baggage Allowance')]//following::input)[1]");
+        
 
 
 

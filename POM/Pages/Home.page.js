@@ -14,6 +14,9 @@ class Homepage extends Basepage {
         this.servicesBtn = page.locator('//a[@href="/services"]');
         this.supplierBtn = page.locator('//a[@href="/suppliers"]');
         this.userManagementBtn = page.locator('//a[@href="/user-management"]');
+        this.settingBtn = page.locator('//a[@href="/settings"]');
+        this.approvedQuotationsTab = page.locator('//a[@href="/quotations/approved-quotations"]');
+
     }
 
 
