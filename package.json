@@ -1,22 +1,23 @@
 {
-  "name": "pachage.json",
+  "name": "gto-playwright-tests",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
+  "description": "Playwright automation tests for GTO & PoshSaver project",
+  "author": "amir sami",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
     "allure:generate": "allure generate ./allure-results -o ./allure-report --clean",
     "allure:open": "allure open ./allure-report"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@playwright/test": "^1.57.0",
-    "dotenv": "^17.2.3"
-  },
   "devDependencies": {
+    "@playwright/test": "^1.57.0",
     "allure-commandline": "^2.36.0",
     "allure-playwright": "^3.4.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
   }
 }
