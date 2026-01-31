@@ -28,7 +28,7 @@ test.beforeEach(async ({ page }) => {
 
 test.describe('Company E2E tests', () =>{
 
-    test('Create Company Successfully' , async()=>{
+    test('Create Company Successfully for Review' , async()=>{
         await loginPage.login(email,password)
         await expect(await homepage.getByText('amir agent')).toBeVisible();
         await homepage.companiesBtn.click();

@@ -44,7 +44,8 @@ class PoshSaverRequestsPage extends Basepage {
             await this.yesBtn.click();
             await this.historyBtn.click()
             await this.selectFirstRowHistory.click()
-            expect(await this.statusOfRequest).toContain('approved')
+            const status = await this.statusOfRequest.textContent()
+            expect(status).toContain('approved')
 
 
 
